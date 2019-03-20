@@ -33,6 +33,7 @@ class CustomerAccountTest {
 	
 	@Test
 	void test_createNewAccount_shouldThrowNoAccountCreatedExceptionOnAdd() throws SQLException, NoAccountCreatedException {
+		// Author: Kevin
 		// test data to passs into method
 		String name = "John";
 		String phone = "123-456-7890";
@@ -52,6 +53,7 @@ class CustomerAccountTest {
 	
 	@Test
 	void test_createNewAccount_shouldThrowNoAccountCreatedExceptionOnSave() throws SQLException, NoAccountCreatedException {
+		// Author: Ramnath
 		// test data to passs into method
 		String name = "John";
 		String phone = "123-456-7890";
@@ -63,6 +65,7 @@ class CustomerAccountTest {
 	
 	@Test
 	void test_UpdateCustomerName_shouldThrowNoSuchCustomerAccountExceptionOnUpdate() {
+		// Author: Vamsi
 		assertEquals(1,1, "Still needs to be implemented");
 	}
 
