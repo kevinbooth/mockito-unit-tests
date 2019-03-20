@@ -51,8 +51,19 @@ class CustomerAccountTest {
 	}
 	
 	@Test
-	void test_UpdateCustomerName() {
-		assertEquals(1,1, "This works");
+	void test_createNewAccount_shouldThrowNoAccountCreatedExceptionOnSave() throws SQLException, NoAccountCreatedException {
+		// test data to passs into method
+		String name = "John";
+		String phone = "123-456-7890";
+		
+		// this will be very similar to the above unit test
+		// all you have to do mock the exception response for cao.saveAccount rather than cao.newAcctNumber
+		assertEquals(1,1, "Still needs to be implemented");
+	}
+	
+	@Test
+	void test_UpdateCustomerName_shouldThrowNoSuchCustomerAccountExceptionOnUpdate() {
+		assertEquals(1,1, "Still needs to be implemented");
 	}
 
 	@AfterEach
