@@ -9,6 +9,7 @@ public class CustomerAccount {
 	private String custName;
 	private String custPhone;
 	private String custAcctNumber;
+	private CustomerAccountDAO cad;
 	
 	public CustomerAccount() {
 		// create empty CustomerAccount
@@ -18,7 +19,6 @@ public class CustomerAccount {
 		CustomerAccount newAcct = null;
 		String acctNum = "";
 		
-		CustomerAccountDAO cad = new CustomerAccountDAO();
 		try {
 			acctNum = cad.newAcctNumber(name, phone);
 		} catch (SQLException se) {
@@ -44,9 +44,7 @@ public class CustomerAccount {
 		return newAcct;
 	}
 	
-	public CustomerAccount updateCustomerName(String acctNum, String name) throws NoSuchCustomerAccountException {
-		CustomerAccountDAO cad = new CustomerAccountDAO();
-		
+	public CustomerAccount updateCustomerName(String acctNum, String name) throws NoSuchCustomerAccountException {		
 		try {
 			custName = name;
 			cad.updateAccount(this);
@@ -56,6 +54,10 @@ public class CustomerAccount {
 		}
 		
 		return null;
+	}
+	
+	public void setCustomerAccountDAO(CustomerAccountDAO cad) {
+		this.cad = cad;
 	}
 
 }
