@@ -75,7 +75,7 @@ class CustomerAccountTest {
 	
 	@Test
 	void test_UpdateCustomerName_shouldThrowNoSuchCustomerAccountExceptionOnUpdate() throws SQLException {
-		// Author: Vamsi
+		// Author: Vamsi Krishna
 		String acctNum = "1234567890";
 		String name = "John";
 		
